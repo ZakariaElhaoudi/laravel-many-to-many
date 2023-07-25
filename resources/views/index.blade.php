@@ -13,9 +13,12 @@
                 <ul class="list-unstyled">
                     @foreach( $projects as $project)
 
-                        <a class="text-dark" href="{{ route('project.show', $project -> id) }}">
-                            <li>{{ $project -> name}}</li>
-                        </a>
+                       
+                        <span class="">
+                            <a class="p-4" href="{{ route('project.show', $project -> id) }}">
+                                <li>{{ $project -> name}}</li>
+                            </a>
+                        </span>
             
                     @endforeach
                 </ul>
