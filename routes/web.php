@@ -44,10 +44,10 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::middleware('auth')->group(function () {
-    Route :: get("/", [ProjectController :: class, "index"])-> name('index');
-    Route :: get("/show{id}", [ProjectController :: class, "show"])-> name('show');    
-});
+// Route::middleware('auth')->group(function () {
+//     Route :: get("/", [ProjectController :: class, "index"])-> name('index');
+//     Route :: get("/show{id}", [ProjectController :: class, "show"])-> name('show');    
+// });
 
 
 require __DIR__.'/auth.php';

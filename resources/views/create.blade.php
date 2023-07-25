@@ -22,6 +22,10 @@
                 <input type="text" name="description" id="description">
             </div>
             <div class="group-form">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="group-form">
                 <label for="start_date">START DATE</label>
                 <input type="date" name="start_date" id="start_date">
             </div>
@@ -39,6 +43,15 @@
                         </option>
                     @endforeach
                 </select>
+                <label for="technology_id">Technology</label>
+                    @foreach ($technologies as $technology)
+                        <div class="form-check mx-auto" style="width: 200px">
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="technologies[]" value="{{ $technology -> id }}">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                {{ $technology -> name }}
+                            </label>
+                        </div>
+                    @endforeach
             </div>
 
             <input class="my-3" type="submit" value="CREATE">

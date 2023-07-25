@@ -4,11 +4,16 @@
     <div class="container ">
         <div class="row">
             <div class="col text-center">
-                <h1>Progetti</h1>
+                
+                <span>
+                    <h1>Progetti</h1>
+                    <a class="btn btn-primary" href="{{ route('project.create') }}">Plus</a>
+                </span>
+                
                 <ul class="list-unstyled">
                     @foreach( $projects as $project)
 
-                        <a class="text-dark" href="{{ route('show', $project -> id) }}">
+                        <a class="text-dark" href="{{ route('project.show', $project -> id) }}">
                             <li>{{ $project -> name}}</li>
                         </a>
             

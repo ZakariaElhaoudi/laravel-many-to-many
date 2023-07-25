@@ -19,6 +19,7 @@ class ProjectSeeder extends Seeder
     {
        $projects = Project::factory()->count(30)->make();
 
+    //    Project ::factory()->count(30)->create();
 
         foreach ($projects as $project) {
 
