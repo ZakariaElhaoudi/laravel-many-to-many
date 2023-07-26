@@ -15,11 +15,11 @@
 
             <<div class="group-form">
                 <label for="name">NAME</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" value="{{ $technology -> name }}">
             </div>
             <div class="group-form">
                 <label for="description">DESCRIPTION</label>
-                <input type="text" name="description" id="description">
+                <input type="text" name="description" id="description" value="{{ $technology -> description }}">
             </div> 
             <div>
                 @foreach ($projects as $project)
