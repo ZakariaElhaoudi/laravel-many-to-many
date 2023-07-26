@@ -30,7 +30,10 @@
                     <ul>
                         @foreach ($project -> technologies as $technology)
                             <li>
-                                {{ $technology -> name }}
+                                <a href="{{ route('technology.show', $technology -> id) }}">
+                                    {{ $technology -> name }}
+                                </a>
+                                
                             </li>
                         @endforeach
                     </ul>

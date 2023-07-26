@@ -34,7 +34,7 @@
                 <input type="date" name="end_date" id="end_date">
             </div>
            
-            <div class="group-form">
+            <div class="group-form d-flex justify-content-between">
                 <label for="type_id">Type</label>
                 <select name="type_id" id="type_id">
                     @foreach ($types as $type)
@@ -46,8 +46,8 @@
                 <label for="technology_id">Technology</label>
                     @foreach ($technologies as $technology)
                         <div class="form-check mx-auto" style="width: 200px">
-                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="technologies[]" value="{{ $technology -> id }}">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" id="technology_id" name="technologies[]" value="{{ $technology -> id }}">
+                            <label class="form-check-label" for="technology_id">
                                 {{ $technology -> name }}
                             </label>
                         </div>

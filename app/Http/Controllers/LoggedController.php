@@ -16,7 +16,7 @@ class LoggedController extends Controller
 
         $project = Project :: findOrFail($id);
 
-        return view('show', compact('project'));
+        return view('project.show', compact('project'));
     }
 
     public function create() {
@@ -25,7 +25,7 @@ class LoggedController extends Controller
 
         $technologies = Technology :: all();
 
-        return view('create', compact('types', 'technologies'));
+        return view('project.create', compact('types', 'technologies'));
     }
     public function store(Request $request) {
 
