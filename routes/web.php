@@ -18,9 +18,11 @@ use App\Http\Controllers\TechnologyController;
 |
 */
 
+Route :: get('/index', [ProjectController :: class, 'index'])
+    -> name('index');
+
 // PROJECT
-Route :: get('/', [ProjectController :: class, 'index'])
-    -> name('project.index');
+
 
 
 Route :: get('/project/show/{id}', [LoggedController :: class, 'show'])
