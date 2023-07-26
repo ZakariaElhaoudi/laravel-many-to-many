@@ -18,13 +18,9 @@ use App\Http\Controllers\TechnologyController;
 |
 */
 
-
+// PROJECT
 Route :: get('/', [ProjectController :: class, 'index'])
     -> name('project.index');
-
-Route :: get('/technology/show/{id}', [TechnologyController :: class, 'show'])
-    -> middleware(['auth'])
-    -> name('technology.show');
 
 
 Route :: get('/project/show/{id}', [LoggedController :: class, 'show'])
@@ -38,6 +34,13 @@ Route :: post('/project/store', [LoggedController :: class, 'store'])
     -> middleware(['auth'])
     -> name('project.store');
 
+Route :: get('/project/{id}/edit', [LoggedController :: class, 'edit'])
+    -> middleware(['auth'])
+    -> name('project.edit');
+Route :: put('/project/{id}/update', [LoggedController :: class, 'update'])
+    -> middleware(['auth'])
+    -> name('project.update');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -49,5 +52,24 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// TECHNOLOGY
+
+Route :: get('/technology/show/{id}', [TechnologyController :: class, 'show'])
+    -> middleware(['auth'])
+    -> name('technology.show');
+
+Route :: get('/technology/create', [TechnologyController :: class, 'create'])
+    -> middleware(['auth'])
+    -> name('technology.create');
+Route :: post('/technology/store', [TechnologyController :: class, 'store'])
+    -> middleware(['auth'])
+    -> name('technology.store');
+
+Route :: get('/technology/{id}/edit', [TechnologyController :: class, 'edit'])
+    -> middleware(['auth'])
+    -> name('technology.edit');
+Route :: put('/technology/{id}/update', [TechnologyController :: class, 'update'])
+    -> middleware(['auth'])
+    -> name('technology.update');
 
 require __DIR__.'/auth.php';

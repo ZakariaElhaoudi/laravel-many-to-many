@@ -15,4 +15,20 @@ class TechnologyController extends Controller
 
         return view('technology.show', compact('technology', 'project'));
     }
+
+    public function create() {
+
+        $projects = Project :: all();
+
+        return view('technology.create', compact('projects'));
+    }
+    public function store(Request $request) {
+
+        $data = $request -> all();
+
+        $technology = Technology :: create($data);
+        $technology -> projects() -> attach($data['projects']);
+
+        return redirect() -> route('technology.show', $technology -> id);
+    }
 }

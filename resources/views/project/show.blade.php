@@ -38,6 +38,7 @@
                         @endforeach
                     </ul>
                 </div>
+                <a class="btn btn-primary my-3" href="{{ route('project.edit', $project -> id) }}">UPDATE</a>
             </div>
         </div>
     </div>
