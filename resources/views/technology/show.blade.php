@@ -27,7 +27,7 @@
                     <h1>Progetti</h1>
                     <a class="btn btn-primary" href="{{ route('technology.create') }}">Plus</a>
                 </span>
-                <input class="btn btn-primary my-3" type="submit" value="update">
+                <a class="btn btn-primary my-3" href="{{ route('project.edit', $project -> id) }}">UPDATE</a>
             </div>
         </div>
     </div>

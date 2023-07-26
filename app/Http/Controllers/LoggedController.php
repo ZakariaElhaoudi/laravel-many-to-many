@@ -43,6 +43,7 @@ class LoggedController extends Controller
         $technologies = Technology :: all();
         $types = Type :: all();
 
+
         return view('project.edit', compact('technologies', 'project','types'));
     }
     public function update(Request $request, $id) {
