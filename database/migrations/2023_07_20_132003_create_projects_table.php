@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('author');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
+            $table -> string('main_picture') -> nullable();
 
             $table->timestamps();
         });

@@ -16,7 +16,8 @@ class Project extends Model
         'author',
         'start_date',
         'end_date',
-        'type_id'
+        'type_id',
+        'main_picture'
 
     ];
 
